@@ -1,0 +1,18 @@
+Description of the Two Features:
+1. Create Folder: The "Create Folder" feature allows users to create folders within the Multimedia Web App. When the user clicks on the "Create Folder" button, a prompt appears where they can enter the desired folder name. Once the user submits the name, a new folder object is added to the `myFiles` state array, containing a unique ID, name, type set to "folder," and a path. This feature provides users with the ability to organize their files and create a hierarchical structure within the app.
+
+2. Search: The "Search" feature enables users to search for specific files within the Multimedia Web App. When the user clicks on the "Search" button, a prompt appears where they can enter a search query. The app then filters the `myFiles` state array based on the search query, displaying only the files that match the search criteria. This feature enhances the user experience by allowing them to quickly locate and access files based on their names or other relevant keywords.
+
+Reasons for Choosing These Features:
+These two features were chosen as they provide important functionalities to enhance the overall user experience of the Multimedia Web App. The ability to create folders allows users to organize their files systematically, making it easier to manage and locate specific files. This feature is especially useful when dealing with a large number of files, as it helps prevent clutter and confusion.
+
+The search feature was included to facilitate efficient file retrieval. As the number of files increases, finding a specific file becomes more time-consuming. By implementing the search functionality, users can quickly locate files based on their names or keywords, saving time and effort.
+
+Explanation of How the Code Works:
+The code uses React hooks, specifically `useState` and `useEffect`, to manage the state of the application. The `myFiles` state stores an array of file objects that represent the files and folders within the app. The `selectedFile` state keeps track of the currently selected file.
+
+When the "Create Folder" button is clicked, an `onClick` event handler is triggered. It prompts the user to enter a folder name and, upon submission, creates a new folder object with a unique ID and the provided name. The new folder object is added to the `myFiles` state array using the `setMyFiles` function.
+
+The "Search" button's `onClick` event handler prompts the user to enter a search query. Upon submission, the app filters the `myFiles` state array using the `filter` function, comparing each file's name to the search query. The filtered results are then set as the new state using `setMyFiles`, updating the file display to show only the matching files.
+
+Overall, these additions provide users with essential file management capabilities, allowing them to organize their files effectively and quickly locate specific files within the Multimedia Web App.
